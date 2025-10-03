@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="formulario.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="cabeca">
+        <img src="imagens/logo.jpeg" class="logo">
+        <h1 class="dalla">Glow Code</h1>
+        <nav>
+            <ul>
+                <li><i class='bx bx-cart'></i><a href="carrinho.html"> Carrinho</a></li>
+                <li><i class='bx bx-child'></i><a href="formulario.html">Conta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTAINER DO FORMULÁRIO -->
+    <div>
+        <h1>Seu cadastro</h1>
+        <p>Preencha os dados completos para cadastro</p>
+    </div>
+
+    <form action="#" method="post">
+        <fieldset>
+            <div class="bloco">
+                <label for="nome_aluno">Nome</label>
+                <input type="text" name="nome_aluno" id="nome_aluno" placeholder="primeiro nome">
+            </div>
+            <div class="bloco">
+                <label for="sobrenome_aluno">Sobrenome</label>
+                <input type="text" name="sobrenome_aluno" id="sobrenome_aluno">
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="bloco">
+                <label for="email_aluno">E-mail</label>
+                <input type="email" name="email_aluno" id="email_aluno">
+            </div>
+            <div class="bloco">
+                <label for="senha_aluno">Senha</label>
+                <input type="password" name="senha_aluno" id="senha_aluno">
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="bloco">
+                <label>Qual a Sua Idade?</label>
+                <div class="letra_normal">
+                    <label>
+                        <input type="radio" name="turma_aluno" value="2anem"> 0 a 5
+                    </label>
+                    <label>
+                        <input type="radio" name="turma_aluno" value="2bnem"> 5 a 10
+                    </label>
+                    <label>
+                        <input type="radio" name="turma_aluno" value="2ads"> 10 a 18
+                    </label>
+                    <label>
+                        <input type="radio" name="turma_aluno" value="2bds"> 18+
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <label for="melhor_materia">Estado Civil</label>
+            <select name="melhor_materia" id="melhor_materia">
+                <option selected disabled value="">Selecione</option>
+                <option>Casado</option>
+                <option>Solteiro</option>
+                <option>Divorciado</option>
+                <option>Corno</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <label>Mora Sozinho?</label>
+            <div class="letra_normal">
+                <input type="checkbox" id="sim" value="sim">
+                <label for="sim">Sim</label>
+                <input type="checkbox" id="nao" value="nao">
+                <label for="nao">Não</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="bloco">
+                <label for="historia">Conte um pouco da sua história: (opcional)</label>
+                <textarea name="historia" id="historia" cols="48" rows="10"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <button type="submit"><a href="index.html">Enviar</a></button>
+        </fieldset>
+    </form>
+</body>
+</html>

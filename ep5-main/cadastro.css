@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --preto: #000000;
+    --cinza-escuro: #1C1C1C;
+    --cinza-medio: #666666;
+    --branco: #F5F5F5;
+    --vermelho: #C8102E;
+    --vinho: #800020;
+}
+
+/* RESET E GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* BODY */
+body {
+    min-height: 100vh;
+    background: #1C1C1C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* HEADER */
+.cabeca {
+    width: 100%;
+    background-color: var(--vermelho);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.cabeca .logo {
+    height: 80px;
+    border-radius: 30%;
+}
+
+.cabeca .dalla {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    color: var(--branco);
+}
+
+.cabeca nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.cabeca nav a {
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.cabeca nav a:hover {
+    color: var(--vinho);
+}
+
+/* MOBILE HEADER */
+@media (max-width: 768px) {
+    .cabeca {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    .cabeca .dalla {
+        margin: 10px 0;
+        font-size: 32px;
+    }
+    .cabeca nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* SECTION LOGIN */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - 100px); /* altura total menos o header */
+    background: url(736059.png) no-repeat center;
+    background-size: cover;
+}
+
+/* FORMULÁRIO LOGIN */
+.form-box {
+    position: relative;
+    width: 400px;
+    padding: 40px;
+    background: rgba(0,0,0,0.5);
+    border: 2px solid var(--preto);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 2em;
+    color: var(--branco);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.input-box {
+    position: relative;
+    margin: 20px 0;
+    width: 100%;
+    border-bottom: 2px solid var(--branco);
+}
+
+.input-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--branco);
+    padding: 0 35px 0 5px;
+    font-size: 1em;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: var(--branco);
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -10px;
+    font-size: 0.85em;
+    color: #ffdddd;
+}
+
+.input-box ion-icon {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: var(--branco);
+}
+
+.forget {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    color: var(--branco);
+    margin: -10px 0 15px;
+}
+
+.forget input {
+    margin-right: 5px;
+}
+
+.forget a {
+    color: #ffdddd;
+    text-decoration: none;
+}
+
+.forget a:hover {
+    text-decoration: underline;
+}
+
+.botao {
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: var(--vermelho);
+    color: var(--branco);
+    text-align: center;
+    line-height: 45px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: var(--vinho);
+}
+
+.registro {
+    font-size: 0.9em;
+    color: var(--branco);
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.registro p a {
+    text-decoration: none;
+    color: var(--vermelho);
+    font-weight: 600;
+}
+
+.registro p a:hover {
+    text-decoration: underline;
+}

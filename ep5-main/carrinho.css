@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --preto: #000000;
+    --cinza-escuro: #1C1C1C;
+    --cinza-medio: #666666;
+    --branco: #F5F5F5;
+    --vermelho: #C8102E;
+    --vinho: #800020;
+}
+
+body {
+    background-color: var(--preto);
+    font-family: 'Lato', sans-serif;
+    color: var(--preto);
+}
+
+/* HEADER */
+.cabeca {
+    text-align: center;
+    background-color: var(--vermelho);
+    height: 100px;
+    position: relative;
+}
+
+.cabeca nav {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+
+.cabeca nav ul {
+    list-style: none;
+}
+
+.cabeca nav li {
+    display: inline;
+    margin-left: 15px;
+}
+
+.cabeca nav a {
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--branco);
+    transition: 0.3s;
+}
+
+.cabeca nav a:hover {
+    color: var(--vinho);
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+    height: 80px;
+    top: 10px;
+    border-radius: 30%;
+}
+
+.dalla {
+    position: relative;
+    top: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    color: var(--branco);
+}
+
+/* MAIN */
+main {
+    display: flex;
+    padding: 30px;
+    gap: 30px;
+    color: var(--preto);
+}
+
+/* TÍTULO DA PÁGINA */
+.page-title {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 30px;
+    color: var(--branco);
+}
+
+/* SECTION PRODUTOS */
+section {
+    flex: 2;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--branco);
+}
+
+thead tr th {
+    text-align: left;
+    border-bottom: 2px solid var(--vinho);
+    padding: 12px 0;
+    text-transform: uppercase;
+}
+
+tbody tr td {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--cinza-medio);
+}
+
+.product {
+    display: flex;
+    align-items: center;
+}
+
+.product img {
+    border-radius: 10px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.info {
+    margin-left: 15px;
+}
+
+.name {
+    font-size: 18px;
+    color: var(--branco);
+}
+
+.category {
+    font-size: 14px;
+    color: var(--cinza-medio);
+}
+
+/* QUANTIDADE */
+.qty {
+    background: var(--cinza-escuro);
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 60px;
+    border-radius: 20px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.qty button {
+    background: transparent;
+    border: 0;
+    color: var(--branco);
+    font-size: 18px;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.qty button:hover {
+    background: var(--vermelho);
+}
+
+/* BOTÃO REMOVER */
+.remove {
+    background: var(--cinza-escuro);
+    border: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--branco);
+    transition: 0.3s;
+}
+
+.remove:hover {
+    background: var(--vinho);
+}
+
+/* ASIDE RESUMO */
+aside {
+    flex: 1;
+    min-width: 250px;
+}
+
+aside .box {
+    background: var(--cinza-escuro);
+    color: var(--branco);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+aside .box1 {
+    background: var(--vermelho);
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+aside .info {
+    padding: 20px;
+}
+
+.info div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+aside footer {
+    padding: 15px 20px;
+    background: var(--vinho);
+    font-size: 18px;
+}
+
+/* BOTÕES */
+aside .box button,
+.fin {
+    border: 0;
+    padding: 12px 0;
+    color: var(--branco);
+    background: var(--vermelho);
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+aside .box button:hover,
+.fin:hover {
+    background: var(--vinho);
+}
